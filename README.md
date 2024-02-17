@@ -44,7 +44,6 @@ cat < file1
 ## OUTPUT
 
 ```
-``` 
 ```
 anil aggarwal
 barun sengupta
@@ -58,8 +57,6 @@ cat < file2
 ## OUTPUT
 
 ```
-``` 
-```
 anil aggarwal
 barun sengupta
 c.k. shukla
@@ -72,23 +69,24 @@ cmp file1 file2
 ## OUTPUT
 
 ```
-``` 
-```
+file1 file2 differ: byte 1, line 1
 ``` 
 comm file1 file2
  ## OUTPUT
 
 ```
+        anil aggarwal
+        barun sengupta
+chanchal singhvi
+                c.k. shukla
+        lalit chowdury
+                s.n. dasgupta
+sumit chakrobarty
 ``` 
 
-```
-``` 
  
 diff file1 file2
 ## OUTPUT
-
-```
-``` 
 
 ```
 ``` 
@@ -119,16 +117,8 @@ cut -c1-3 file11
 ``` 
 
 
-```
-``` 
-
-
 cut -d "|" -f 1 file22
 ## OUTPUT
-
-```
-``` 
-
 
 ```
 ``` 
@@ -139,16 +129,12 @@ cut -d "|" -f 2 file22
 ```
 ``` 
 
-
-```
-``` 
-
 cat < newfile 
 ```
 Hello world
 hello world
 ^d
-````
+```
 cat > newfile 
 Hello world
 hello world
