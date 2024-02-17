@@ -42,6 +42,9 @@ s.n. dasgupta
 ### Display the content of the files
 cat < file1
 ## OUTPUT
+
+```
+``` 
 ```
 anil aggarwal
 barun sengupta
@@ -53,6 +56,9 @@ s.n. dasgupta
 
 cat < file2
 ## OUTPUT
+
+```
+``` 
 ```
 anil aggarwal
 barun sengupta
@@ -64,14 +70,28 @@ s.n. dasgupta
 # Comparing Files
 cmp file1 file2
 ## OUTPUT
- 
+
+```
+``` 
+```
+``` 
 comm file1 file2
  ## OUTPUT
 
+```
+``` 
+
+```
+``` 
  
 diff file1 file2
 ## OUTPUT
 
+```
+``` 
+
+```
+``` 
 
 #Filters
 
@@ -95,17 +115,33 @@ cat > file22
 cut -c1-3 file11
 ## OUTPUT
 
+```
+``` 
 
+
+```
+``` 
 
 
 cut -d "|" -f 1 file22
 ## OUTPUT
 
+```
+``` 
 
+
+```
+``` 
 
 cut -d "|" -f 2 file22
 ## OUTPUT
 
+```
+``` 
+
+
+```
+``` 
 
 cat < newfile 
 ```
@@ -120,39 +156,72 @@ hello world
 grep Hello newfile 
 ## OUTPUT
 
+```
+``` 
 
+```
+``` 
 
 grep hello newfile 
 ## OUTPUT
 
+```
+``` 
 
 
+```
+``` 
 
 grep -v hello newfile 
 ## OUTPUT
 
+```
+``` 
 
+
+```
+``` 
 
 cat newfile | grep -i "hello"
 ## OUTPUT
 
+```
+``` 
 
+
+```
+``` 
 
 
 cat newfile | grep -i -c "hello"
 ## OUTPUT
 
+```
+``` 
 
+
+```
+``` 
 
 
 grep -R ubuntu /etc
 ## OUTPUT
 
+```
+``` 
 
+
+```
+``` 
 
 grep -w -n world newfile   
 ## OUTPUT
 
+```
+``` 
+
+```
+``` 
 
 cat < newfile 
 ```
@@ -176,15 +245,27 @@ Linux is best in this World
 egrep -w 'Hello|hello' newfile 
 ## OUTPUT
 
+```
+``` 
+
 
 
 egrep -w '(H|h)ello' newfile 
 ## OUTPUT
 
+```
+``` 
+
+```
+``` 
+
 
 
 egrep -w '(H|h)ell[a-z]' newfile 
 ## OUTPUT
+
+```
+``` 
 
 
 
@@ -192,42 +273,69 @@ egrep -w '(H|h)ell[a-z]' newfile
 egrep '(^hello)' newfile 
 ## OUTPUT
 
+```
+``` 
+
 
 
 egrep '(world$)' newfile 
 ## OUTPUT
+
+```
+``` 
 
 
 
 egrep '(World$)' newfile 
 ## OUTPUT
 
+```
+``` 
+
 
 egrep '((W|w)orld$)' newfile 
 ## OUTPUT
+
+```
+``` 
 
 
 
 egrep '[1-9]' newfile 
 ## OUTPUT
 
+```
+``` 
+
 
 
 egrep 'Linux.*world' newfile 
 ## OUTPUT
 
+```
+``` 
+
 
 egrep 'Linux.*World' newfile 
 ## OUTPUT
+
+```
+``` 
 
 
 egrep l{2} newfile
 ## OUTPUT
 
+```
+``` 
+
 
 
 egrep 's{1,2}' newfile
 ## OUTPUT 
+
+```
+``` 
 
 
 cat > file23
@@ -247,35 +355,56 @@ cat > file23
 sed -n -e '3p' file23
 ## OUTPUT
 
+```
+``` 
+
 
 
 sed -n -e '$p' file23
 ## OUTPUT
+
+```
+``` 
 
 
 
 sed  -e 's/Ram/Sita/' file23
 ## OUTPUT
 
+```
+``` 
+
 
 
 sed  -e '2s/Ram/Sita/' file23
 ## OUTPUT
+
+```
+``` 
 
 
 
 sed  '/tom/s/5000/6000/' file23
 ## OUTPUT
 
+```
+``` 
+
 
 
 sed -n -e '1,5p' file23
 ## OUTPUT
 
+```
+``` 
+
 
 
 sed -n -e '2,/Joe/p' file23
 ## OUTPUT
+
+```
+``` 
 
 
 
@@ -283,38 +412,62 @@ sed -n -e '2,/Joe/p' file23
 sed -n -e '/tom/,/Joe/p' file23
 ## OUTPUT
 
+```
+``` 
+
 
 
 seq 10 
 ## OUTPUT
+
+```
+``` 
 
 
 
 seq 10 | sed -n '4,6p'
 ## OUTPUT
 
+```
+``` 
+
 
 
 seq 10 | sed -n '2,~4p'
 ## OUTPUT
+
+```
+``` 
 
 
 
 seq 3 | sed '2a hello'
 ## OUTPUT
 
+```
+``` 
+
 
 
 seq 2 | sed '2i hello'
 ## OUTPUT
 
+```
+``` 
+
 
 seq 10 | sed '2,9c hello'
 ## OUTPUT
 
+```
+``` 
+
 
 sed -n '2,4{s/^/$/;p}' file23
 ## OUTPUT
+
+```
+``` 
 
 
 
@@ -333,6 +486,9 @@ cat > file21
 sort file21
 ## OUTPUT
 
+```
+``` 
+
 
 cat > file22
 ```
@@ -346,12 +502,18 @@ cat > file22
 uniq file22
 ## OUTPUT
 
+```
+``` 
+
 
 
 #Using tr command
 
 cat file23 | tr [:lower:] [:upper:]
  ## OUTPUT
+
+```
+``` 
 
 cat < urllist.txt
 ```
@@ -369,16 +531,25 @@ www. mrcet.... com
 cat urllist.txt | tr -d ' '
  ## OUTPUT
 
+```
+``` 
+
 
  
 cat urllist.txt | tr -d ' ' | tr -s '.'
 ## OUTPUT
+
+```
+``` 
 
 
 
 #Backup commands
 tar -cvf backup.tar *
 ## OUTPUT
+
+```
+``` 
 
 
 mkdir backupdir
@@ -388,17 +559,29 @@ mv backup.tar backupdir
 tar -tvf backup.tar
 ## OUTPUT
 
+```
+``` 
+
 
 tar -xvf backup.tar
 ## OUTPUT
+
+```
+``` 
 
 gzip backup.tar
 
 ls .gz
 ## OUTPUT
+
+```
+``` 
  
 gunzip backup.tar.gz
 ## OUTPUT
+
+```
+``` 
 
  
 # Shell Script
@@ -409,6 +592,9 @@ echo 'echo Hello World‘; exit 0 >> my-script.sh
 chmod 755 my-script.sh
 ./my-script.sh
 ## OUTPUT
+
+```
+``` 
 
  
 cat << stop > herecheck.txt
@@ -421,6 +607,9 @@ stop
 
 cat herecheck.txt
 ## OUTPUT
+
+```
+``` 
 
 
 cat < scriptest.sh 
@@ -460,22 +649,37 @@ chmod 777 scriptest.sh
 
 ## OUTPUT
 
+```
+``` 
+
  
 ls file1
 ## OUTPUT
 
+```
+``` 
+
 echo $?
 ## OUTPUT 
+
+```
+``` 
 ./one
 bash: ./one: Permission denied
  
 echo $?
 ## OUTPUT 
+
+```
+``` 
  
 abcd
  
 echo $?
  ## OUTPUT
+
+```
+``` 
 
 
  
@@ -509,12 +713,18 @@ fi
 ```
 ##OUTPUT
 
+```
+``` 
+
 
 
 chmod 755 strcomp.sh
  
 ./strcomp.sh 
 ## OUTPUT
+
+```
+``` 
 
 
 # check file ownership
@@ -542,6 +752,9 @@ fi
  ```
 ./psswdperm.sh
 ## OUTPUT
+
+```
+``` 
 
 # check if with file location
 cat>ifnested.sh 
@@ -589,6 +802,9 @@ fi
 ./ifnested.sh 
 ## OUTPUT
 
+```
+``` 
+
 
 
 # using numeric test comparisons
@@ -632,6 +848,9 @@ $ chmod 755 iftest.sh
  
 $ ./iftest.sh 
 ##OUTPUT
+
+```
+``` 
 
 # check if a file
 cat > ifnested.sh 
@@ -682,6 +901,9 @@ $ chmod 755 ifnested.sh
 $ ./ifnested.sh 
 ##OUTPUT
 
+```
+``` 
+
 # looking for a possible value using elif
 cat elifcheck.sh 
 ```bash
@@ -710,6 +932,9 @@ $ chmod 755 elifcheck.sh
 $ ./elifcheck.sh 
 ## OUTPUT
 
+```
+``` 
+
 
 # testing compound comparisons
 cat> ifcompound.sh 
@@ -725,6 +950,9 @@ fi
 $ chmod 755 ifcompound.sh
 $ ./ifcompound.sh 
 ## OUTPUT
+
+```
+``` 
 
 # using the case command
 cat >casecheck.sh 
@@ -836,6 +1064,9 @@ done
 $ chmod 755 forin1.sh
 
 ## OUTPUT
+
+```
+``` 
 cat forinfile.sh 
 ```bash
 #!/bin/bash
@@ -858,6 +1089,9 @@ Khammam
 
 ## OUTPUT
 
+```
+``` 
+
 
 cat forctype.sh 
 ```bash
@@ -872,6 +1106,9 @@ $ chmod 755 forctype.sh
 $ ./forctype.sh 
 ## OUTPUT
 
+```
+``` 
+
 cat forctype1.sh 
 ```bash
 #!/bin/bash
@@ -884,6 +1121,9 @@ done
 $ chmod 755 forctype.sh
 $ ./forctype1.sh 
 ## OUTPUT
+
+```
+``` 
 
 cat fornested1.sh 
 ```bash
@@ -903,6 +1143,9 @@ $ chmod 755 fornested1.sh
 $ ./fornested1.sh 
  ## OUTPUT
 
+```
+``` 
+
  
 cat forbreak.sh 
 ```bash
@@ -919,6 +1162,9 @@ done
 echo "The for loop is completed“
 ```
 ## OUTPUT
+
+```
+``` 
 
 $ chmod 755 forbreak.sh
  
@@ -944,6 +1190,9 @@ $ chmod 755 forcontinue.sh
  
 $ ./forcontinue.sh 
 ## OUTPUT
+
+```
+``` 
  
 cat exread.sh 
 ```bash
@@ -959,6 +1208,9 @@ $ chmod 755 exread.sh
 $ ./exread.sh 
 ## OUTPUT
 
+```
+``` 
+
 
  cat exread1.sh
 ```bash
@@ -970,6 +1222,9 @@ echo "Hello $name, welcome to my program. “
 $ chmod 755 exread1.sh 
 
 ## OUTPUT
+
+```
+``` 
 
 
 
@@ -991,6 +1246,9 @@ echo "Usage: badtest1 a b"
 fi
 ```
 ## OUTPUT
+
+```
+``` 
  ./funcex.sh 
 
  
@@ -1008,6 +1266,9 @@ done
 $ chmod 777 argshift.sh
 
 ## OUTPUT
+
+```
+``` 
 $ ./argshift.sh 1 2 3
  
  cat argshift1.sh
@@ -1025,6 +1286,9 @@ done
 ```
 $ chmod 777 argshift.sh
 ## OUTPUT
+
+```
+``` 
 $ ./argshift.sh 1 2 3
  
 cat argshift.sh
@@ -1038,6 +1302,9 @@ done
 set +x
 ```
 ## OUTPUT
+
+```
+``` 
  ./argshift.sh 1 2 3
  
  
@@ -1070,6 +1337,9 @@ ubcdfghj
 ```
 awk -f nc.awk data.dat
 ## OUTPUT 
+
+```
+``` 
  
 cat > palindrome.sh
 ```bash
@@ -1097,6 +1367,9 @@ else
 fi
 ```
 ## OUTPUT 
+
+```
+``` 
 
 
 # RESULT:
