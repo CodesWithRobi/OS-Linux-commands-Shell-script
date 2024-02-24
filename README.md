@@ -88,6 +88,15 @@ diff file1 file2
 ## OUTPUT
 
 ```
+1c1,2
+< chanchal singhvi
+---
+> anil aggarwal
+> barun sengupta
+2a4
+> lalit chowdury
+4d5
+< sumit chakrobarty
 ``` 
 
 #Filters
@@ -113,6 +122,8 @@ cut -c1-3 file11
 ## OUTPUT
 
 ```
+Hel
+Thi
 ``` 
 
 
@@ -120,24 +131,32 @@ cut -d "|" -f 1 file22
 ## OUTPUT
 
 ```
+1001 
+1002 
+1003 
 ``` 
 
 cut -d "|" -f 2 file22
 ## OUTPUT
 
 ```
+ Ram 
+ tom 
+ Joe 
 ``` 
 
+cat > newfile 
+```
+Hello world
+hello world
+```
+ 
 cat < newfile 
 ```
 Hello world
 hello world
 ^d
 ```
-cat > newfile 
-Hello world
-hello world
- 
 grep Hello newfile 
 ## OUTPUT
 
