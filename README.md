@@ -235,6 +235,8 @@ egrep -w 'Hello|hello' newfile
 ## OUTPUT
 
 ```
+Hello world
+hello world
 ``` 
 
 
