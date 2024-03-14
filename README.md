@@ -18,7 +18,6 @@ Execute the following commands
 
 ### Step 3:
 
-Testing the commands for the desired output. 
 
 # COMMANDS:
 ### Create the following files file1, file2 as follows:
@@ -41,7 +40,6 @@ s.n. dasgupta
 ```
 ### Display the content of the files
 cat < file1
-## OUTPUT
 
 ```
 chanchal singhvi
@@ -52,7 +50,6 @@ sumit chakrobarty
 
 
 cat < file2
-## OUTPUT
 
 ```
 anil aggarwal
@@ -64,13 +61,11 @@ s.n. dasgupta
 
 # Comparing Files
 cmp file1 file2
-## OUTPUT
 
 ```
 file1 file2 differ: byte 1, line 1
 ``` 
 comm file1 file2
- ## OUTPUT
 
 ```
         anil aggarwal
@@ -84,7 +79,6 @@ sumit chakrobarty
 
  
 diff file1 file2
-## OUTPUT
 
 ```
 1c1,2
@@ -118,7 +112,6 @@ cat > file22
 
 
 cut -c1-3 file11
-## OUTPUT
 
 ```
 Hel
@@ -127,7 +120,6 @@ Thi
 
 
 cut -d "|" -f 1 file22
-## OUTPUT
 
 ```
 1001 
@@ -136,7 +128,6 @@ cut -d "|" -f 1 file22
 ``` 
 
 cut -d "|" -f 2 file22
-## OUTPUT
 
 ```
  Ram 
@@ -157,28 +148,24 @@ hello world
 ^d
 ```
 grep Hello newfile 
-## OUTPUT
 
 ```
 Hello world
 ``` 
 
 grep hello newfile 
-## OUTPUT
 
 ```
 hello world
 ``` 
 
 grep -v hello newfile 
-## OUTPUT
 
 ```
 hello world
 ``` 
 
 cat newfile | grep -i "hello"
-## OUTPUT
 
 ```
 Hello world
@@ -186,14 +173,12 @@ hello world
 ``` 
 
 cat newfile | grep -i -c "hello"
-## OUTPUT
 
 ```
 2
 ``` 
 
 grep -R ubuntu /etc
-## OUTPUT
 
 ```
 ``` 
@@ -203,7 +188,6 @@ grep -R ubuntu /etc
 ``` 
 
 grep -w -n world newfile   
-## OUTPUT
 
 ```
 ``` 
@@ -231,7 +215,6 @@ Linux is best in this World
 ^d
  ```
 egrep -w 'Hello|hello' newfile 
-## OUTPUT
 
 ```
 Hello world
@@ -241,7 +224,6 @@ hello world
 
 
 egrep -w '(H|h)ello' newfile 
-## OUTPUT
 
 ```
 ``` 
@@ -252,7 +234,6 @@ egrep -w '(H|h)ello' newfile
 
 
 egrep -w '(H|h)ell[a-z]' newfile 
-## OUTPUT
 
 ```
 ``` 
@@ -261,7 +242,6 @@ egrep -w '(H|h)ell[a-z]' newfile
 
 
 egrep '(^hello)' newfile 
-## OUTPUT
 
 ```
 ``` 
@@ -269,7 +249,6 @@ egrep '(^hello)' newfile
 
 
 egrep '(world$)' newfile 
-## OUTPUT
 
 ```
 ``` 
@@ -277,14 +256,12 @@ egrep '(world$)' newfile
 
 
 egrep '(World$)' newfile 
-## OUTPUT
 
 ```
 ``` 
 
 
 egrep '((W|w)orld$)' newfile 
-## OUTPUT
 
 ```
 ``` 
@@ -292,7 +269,6 @@ egrep '((W|w)orld$)' newfile
 
 
 egrep '[1-9]' newfile 
-## OUTPUT
 
 ```
 ``` 
@@ -300,21 +276,18 @@ egrep '[1-9]' newfile
 
 
 egrep 'Linux.*world' newfile 
-## OUTPUT
 
 ```
 ``` 
 
 
 egrep 'Linux.*World' newfile 
-## OUTPUT
 
 ```
 ``` 
 
 
 egrep l{2} newfile
-## OUTPUT
 
 ```
 ``` 
@@ -322,7 +295,6 @@ egrep l{2} newfile
 
 
 egrep 's{1,2}' newfile
-## OUTPUT 
 
 ```
 ``` 
@@ -343,7 +315,6 @@ cat > file23
 
 
 sed -n -e '3p' file23
-## OUTPUT
 
 ```
 ``` 
@@ -351,7 +322,6 @@ sed -n -e '3p' file23
 
 
 sed -n -e '$p' file23
-## OUTPUT
 
 ```
 ``` 
@@ -359,7 +329,6 @@ sed -n -e '$p' file23
 
 
 sed  -e 's/Ram/Sita/' file23
-## OUTPUT
 
 ```
 ``` 
@@ -367,7 +336,6 @@ sed  -e 's/Ram/Sita/' file23
 
 
 sed  -e '2s/Ram/Sita/' file23
-## OUTPUT
 
 ```
 ``` 
@@ -375,7 +343,6 @@ sed  -e '2s/Ram/Sita/' file23
 
 
 sed  '/tom/s/5000/6000/' file23
-## OUTPUT
 
 ```
 ``` 
@@ -383,7 +350,6 @@ sed  '/tom/s/5000/6000/' file23
 
 
 sed -n -e '1,5p' file23
-## OUTPUT
 
 ```
 ``` 
@@ -391,7 +357,6 @@ sed -n -e '1,5p' file23
 
 
 sed -n -e '2,/Joe/p' file23
-## OUTPUT
 
 ```
 ``` 
@@ -400,7 +365,6 @@ sed -n -e '2,/Joe/p' file23
 
 
 sed -n -e '/tom/,/Joe/p' file23
-## OUTPUT
 
 ```
 ``` 
@@ -408,7 +372,6 @@ sed -n -e '/tom/,/Joe/p' file23
 
 
 seq 10 
-## OUTPUT
 
 ```
 ``` 
@@ -416,7 +379,6 @@ seq 10
 
 
 seq 10 | sed -n '4,6p'
-## OUTPUT
 
 ```
 ``` 
@@ -424,7 +386,6 @@ seq 10 | sed -n '4,6p'
 
 
 seq 10 | sed -n '2,~4p'
-## OUTPUT
 
 ```
 ``` 
@@ -432,7 +393,6 @@ seq 10 | sed -n '2,~4p'
 
 
 seq 3 | sed '2a hello'
-## OUTPUT
 
 ```
 ``` 
@@ -440,21 +400,18 @@ seq 3 | sed '2a hello'
 
 
 seq 2 | sed '2i hello'
-## OUTPUT
 
 ```
 ``` 
 
 
 seq 10 | sed '2,9c hello'
-## OUTPUT
 
 ```
 ``` 
 
 
 sed -n '2,4{s/^/$/;p}' file23
-## OUTPUT
 
 ```
 ``` 
@@ -474,7 +431,6 @@ cat > file21
 1004 | Sit |  7000 | Dev
 ``` 
 sort file21
-## OUTPUT
 
 ```
 ``` 
@@ -490,7 +446,6 @@ cat > file22
 1004 | Sit |  7000 | Dev
 ``` 
 uniq file22
-## OUTPUT
 
 ```
 ``` 
@@ -500,7 +455,6 @@ uniq file22
 #Using tr command
 
 cat file23 | tr [:lower:] [:upper:]
- ## OUTPUT
 
 ```
 ``` 
@@ -519,7 +473,6 @@ www. google. com
 www. mrcet.... com
  ```
 cat urllist.txt | tr -d ' '
- ## OUTPUT
 
 ```
 ``` 
@@ -527,7 +480,6 @@ cat urllist.txt | tr -d ' '
 
  
 cat urllist.txt | tr -d ' ' | tr -s '.'
-## OUTPUT
 
 ```
 ``` 
@@ -536,7 +488,6 @@ cat urllist.txt | tr -d ' ' | tr -s '.'
 
 #Backup commands
 tar -cvf backup.tar *
-## OUTPUT
 
 ```
 ``` 
@@ -547,14 +498,12 @@ mkdir backupdir
 mv backup.tar backupdir
  
 tar -tvf backup.tar
-## OUTPUT
 
 ```
 ``` 
 
 
 tar -xvf backup.tar
-## OUTPUT
 
 ```
 ``` 
@@ -562,13 +511,11 @@ tar -xvf backup.tar
 gzip backup.tar
 
 ls .gz
-## OUTPUT
 
 ```
 ``` 
  
 gunzip backup.tar.gz
-## OUTPUT
 
 ```
 ``` 
@@ -581,7 +528,6 @@ echo 'echo Hello World‘; exit 0 >> my-script.sh
 ```
 chmod 755 my-script.sh
 ./my-script.sh
-## OUTPUT
 
 ```
 ``` 
@@ -596,7 +542,6 @@ stop
 ```
 
 cat herecheck.txt
-## OUTPUT
 
 ```
 ``` 
@@ -637,20 +582,17 @@ chmod 777 scriptest.sh
  
 ./scriptest.sh 1 2 3
 
-## OUTPUT
 
 ```
 ``` 
 
  
 ls file1
-## OUTPUT
 
 ```
 ``` 
 
 echo $?
-## OUTPUT 
 
 ```
 ``` 
@@ -658,7 +600,6 @@ echo $?
 bash: ./one: Permission denied
  
 echo $?
-## OUTPUT 
 
 ```
 ``` 
@@ -666,7 +607,6 @@ echo $?
 abcd
  
 echo $?
- ## OUTPUT
 
 ```
 ``` 
@@ -701,7 +641,6 @@ else
 echo "$val1 is less than $val2"
 fi
 ```
-##OUTPUT
 
 ```
 ``` 
@@ -711,7 +650,6 @@ fi
 chmod 755 strcomp.sh
  
 ./strcomp.sh 
-## OUTPUT
 
 ```
 ``` 
@@ -741,7 +679,6 @@ echo “Sorry, you are not the owner of the /etc/passwd file”
 fi
  ```
 ./psswdperm.sh
-## OUTPUT
 
 ```
 ``` 
@@ -790,7 +727,6 @@ fi
 ```
 
 ./ifnested.sh 
-## OUTPUT
 
 ```
 ``` 
@@ -837,7 +773,6 @@ fi
 $ chmod 755 iftest.sh
  
 $ ./iftest.sh 
-##OUTPUT
 
 ```
 ``` 
@@ -889,7 +824,6 @@ fi
 $ chmod 755 ifnested.sh
  
 $ ./ifnested.sh 
-##OUTPUT
 
 ```
 ``` 
@@ -920,7 +854,6 @@ fi
 $ chmod 755 elifcheck.sh
  
 $ ./elifcheck.sh 
-## OUTPUT
 
 ```
 ``` 
@@ -939,7 +872,6 @@ fi
 ```
 $ chmod 755 ifcompound.sh
 $ ./ifcompound.sh 
-## OUTPUT
 
 ```
 ``` 
@@ -1053,7 +985,6 @@ done
 ```
 $ chmod 755 forin1.sh
 
-## OUTPUT
 
 ```
 ``` 
@@ -1077,7 +1008,6 @@ Adilabad
 Bhadrachalam
 Khammam
 
-## OUTPUT
 
 ```
 ``` 
@@ -1094,7 +1024,6 @@ done
 ````
 $ chmod 755 forctype.sh
 $ ./forctype.sh 
-## OUTPUT
 
 ```
 ``` 
@@ -1110,7 +1039,6 @@ done
 ```
 $ chmod 755 forctype.sh
 $ ./forctype1.sh 
-## OUTPUT
 
 ```
 ``` 
@@ -1131,7 +1059,6 @@ done
 $ chmod 755 fornested1.sh
  
 $ ./fornested1.sh 
- ## OUTPUT
 
 ```
 ``` 
@@ -1151,7 +1078,6 @@ echo "Iteration number: $var1"
 done
 echo "The for loop is completed“
 ```
-## OUTPUT
 
 ```
 ``` 
@@ -1179,7 +1105,6 @@ echo "The for loop is completed“
 $ chmod 755 forcontinue.sh
  
 $ ./forcontinue.sh 
-## OUTPUT
 
 ```
 ``` 
@@ -1196,7 +1121,6 @@ echo "Hello $name, welcome to my program. "
 $ chmod 755 exread.sh 
  
 $ ./exread.sh 
-## OUTPUT
 
 ```
 ``` 
@@ -1211,7 +1135,6 @@ echo "Hello $name, welcome to my program. “
 ``` 
 $ chmod 755 exread1.sh 
 
-## OUTPUT
 
 ```
 ``` 
@@ -1235,7 +1158,6 @@ else
 echo "Usage: badtest1 a b"
 fi
 ```
-## OUTPUT
 
 ```
 ``` 
@@ -1255,7 +1177,6 @@ done
 ```
 $ chmod 777 argshift.sh
 
-## OUTPUT
 
 ```
 ``` 
@@ -1275,7 +1196,6 @@ for (( i=0;i<$ELEMENTS;i++)); do
 done
 ```
 $ chmod 777 argshift.sh
-## OUTPUT
 
 ```
 ``` 
@@ -1291,7 +1211,6 @@ while (( "$#" )); do
 done
 set +x
 ```
-## OUTPUT
 
 ```
 ``` 
@@ -1326,7 +1245,6 @@ bcdfghj
 ubcdfghj
 ```
 awk -f nc.awk data.dat
-## OUTPUT 
 
 ```
 ``` 
@@ -1356,7 +1274,6 @@ else
 	echo "Number is NOT palindrome"
 fi
 ```
-## OUTPUT 
 
 ```
 ``` 
