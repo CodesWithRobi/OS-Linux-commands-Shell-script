@@ -44,7 +44,6 @@ cat < file1
 ## OUTPUT
 
 ```
-```
 chanchal singhvi
 c.k. shukla
 s.n. dasgupta
